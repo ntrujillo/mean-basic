@@ -1,0 +1,53 @@
+<?DOCTYPE html>
+<html >
+	<head>
+		<title>BUGS</title>
+		<link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		<link type="text/css" rel="stylesheet" href="app/styles/main.css">
+		
+	</head>
+	<body ng-app='votosApp'>	
+        <div ui-view="navbar" ng-cloak=""></div>
+		<div class="container">
+		 	<div ui-view="content"></div>	
+		 	<div class="row footer">
+                <p translate="footer">UCE app</p>
+        	</div>	 	
+		</div>
+		
+		<!-- build:js(.) scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+		<script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
+		<!-- endbower -->
+		
+		<!-- build:js({.tmp,app}) scripts/scripts.js -->
+		<script src="app/scripts/app.js"></script>
+		<script src="app/scripts/app.constants.js"></script>
+		<script src="app/scripts/controllers/about.js"></script>		
+		<script src="app/scripts/controllers/entry.js"></script>	
+		<script src="app/scripts/controllers/entry-ctrl.js"></script>
+		<script src="app/scripts/controllers/entry-dialog-ctrl.js"></script>
+		<script src="app/scripts/controllers/votos.js"></script>	
+		<script src="app/scripts/controllers/votos-ctrl.js"></script>
+		<script src="app/scripts/controllers/votos-detail-ctrl.js"></script>
+		<script src="app/scripts/controllers/home.js"></script>
+		<script src="app/scripts/controllers/home-ctrl.js"></script>
+		<script src="app/scripts/controllers/navbar.ctrl.js"></script>		
+		<script src="app/scripts/factory/factory-genero.js"></script>
+		<script src="app/scripts/factory/factory-junta.js"></script>
+		<script src="app/scripts/factory/factory-provincia.js"></script>
+		<script src="app/scripts/factory/factory-canton.js"></script>
+		<script src="app/scripts/factory/factory-lista.js"></script>
+		<script src="app/scripts/services/dateutil-service.js"></script>
+		<script src="app/scripts/services/registro-service.js"></script>		
+		<!-- endbuild -->	
+		
+	</body>
+</html>

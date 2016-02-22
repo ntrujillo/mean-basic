@@ -1,0 +1,31 @@
+{
+  "name": "bugs2",
+  "description": "bugs2",
+  "main": "index.js",
+  "authors": [
+    "nelsont�rujillo@gmail.com\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Cg@\u001b[2~gmail.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bugs2",
+    "server",
+    "lclient"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7",
+    "angular-ui-router": "ui-router#^0.2.18",
+    "angular-bootstrap": "^1.1.2",
+    "angular-resource": "^1.5.0",
+    "angularUtils-pagination": "angular-utils-pagination#^0.10.0"
+  }
+}

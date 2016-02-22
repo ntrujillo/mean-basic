@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="ctrl.save()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="ctrl.clear()">&times;</button>
+        <h3 class="modal-title" id="titleLabel" >Junta {{ctrl.junta.code}}  Total empadronados <spam>{{ctrl.junta.total}}</spam></h3>
+       
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <table>
+            <thead>  
+                <tr>
+                    <td>Numero</td>
+                    <td>Lista</td>
+                    <td>Validos</td>
+                    <td>Blancos</td>
+                    <td>Nulos</td>
+                    <td>Total</td>
+                </tr>              
+            </thead>
+            <tbody>
+                <tr ng-repeat ="lista in ctrl.listas">
+                    <td>{{lista.code}}</td>
+                    <td>{{lista.name}}</td>
+                    <td><input type="number" ng-change="ctrl.sum()" ng-model="lista.votos"></input></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><input disabled="true" type="number" ng-model="ctrl.totalVotos" ></td>
+                    <td><input type="number" ng-model="ctrl.totalBlancos"></input></td>
+                    <td><input type="number" ng-model="ctrl.totalNulos"></input></td>
+                    <td>{{ctrl.totalVotos+ctrl.totalBlancos+ctrl.totalNulos}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="ctrl.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

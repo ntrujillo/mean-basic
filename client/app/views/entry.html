@@ -1,0 +1,32 @@
+<div class="row">
+<h1>Registro de Votos</h1>
+<form>
+	<div class="form-group">
+		<label>Provincia</label>
+		<select class="form-control" ng-change = "ctrl.getCantones(ctrl.selectedProvincia)" ng-model ="ctrl.selectedProvincia" 
+		ng-options="c.code as c.name for c in ctrl.parroquias"></select>						
+	</div>
+	<div class="form-group">
+		<label>Canton</label>
+		<select class="form-control" ng-disabled ="!ctrl.selectedProvincia" ng-change = "ctrl.getJuntas(ctrl.selectedCanton)" ng-model ="ctrl.selectedCanton" 
+		ng-options="c.code as c.name for c in ctrl.cantones"></select>				
+	</div>
+	<div class="form-group">
+		<label>Junta</label>
+		<select class="form-control" ng-disabled ="!ctrl.selectedCanton" ng-change = "ctrl.getGeneros()" ng-model ="ctrl.selectedJunta" 
+		ng-options="c.code as c.name for c in ctrl.juntas"></select>					
+	</div>
+	<div class="form-group">
+		<label>Genero</label>
+		<select class="form-control" ng-disabled ="!ctrl.selectedJunta"  ng-model ="ctrl.selectedGenero" 
+		ng-options="c.code as c.name for c in ctrl.generos"></select>					
+	</div>
+	<div class="form-group">
+		<div class="pull-right">
+			<button ng-disabled ="(!ctrl.selectedJunta || !ctrl.selectedGenero)" ng-click="ctrl.showModal()" class="btn btn-primary">Registrar Votos</button>					
+		</div>
+	</div>
+			
+</form>
+		
+</div>
