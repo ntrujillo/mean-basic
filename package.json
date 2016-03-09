@@ -14,6 +14,7 @@
   "author": "nelsont�rujillo@gmail.com\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Cg@\u001b[2~gmail.com",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "mongoose": "^4.2.5"

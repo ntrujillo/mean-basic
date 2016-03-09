@@ -6,10 +6,12 @@ var mongoose = require('mongoose');
 
 var registros = require('./api/registro');
 var details = require('./api/detail');
+var users = require('./api/user');
 var path = require('path');
-var mode = 'dev';
-var port = 3000;
-mongoose.connect('mongodb://localhost/registros');
+var config = require('./config');
+var mode = config.MODE;
+var port = config.PORT;
+mongoose.connect(config.MONGO_URI);
 
 var app = express();
 
@@ -19,6 +21,7 @@ if (mode == 'dev') {
 };
 app.use('/api/registro', registros);
 app.use('/api/detail', details);
+app.use('/api/me', users);
 
 
 //app.use(express.static(path.join(__dirname,'../client')));

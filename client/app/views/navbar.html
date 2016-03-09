@@ -14,14 +14,14 @@
                  <li ui-sref-active="active" ng-switch-when="true">
                     <a ui-sref="home">
                         <span class="glyphicon glyphicon-home"></span>
-                        <span>Home</span>
+                        <span translate="menu.home">Home</span>
                     </a>
                 </li>                                          
                 <li ui-sref-active="active" ng-switch-when="true" has-role="ROLE_ADMIN" class="dropdown pointer">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <span>
                                     <span class="glyphicon glyphicon-th-list"></span>
-                                    <span class="hidden-tablet" translate="global.menu.entities.main">
+                                    <span class="hidden-tablet" translate="menu.entity">
                                         Entities
                                     </span>
                                     <b class="caret"></b>
@@ -30,11 +30,11 @@
                     <ul class="dropdown-menu">
                         <li ui-sref-active="active" >
                             <a ui-sref="entry"><span class="glyphicon glyphicon-asterisk"></span>
-                            &#xA0;<span>Ingresar Votos</span></a>
+                            &#xA0;<span translate="menu.entry-votos">Ingresar Votos</span></a>
                         </li>
                         <li ui-sref-active="active" >
                             <a ui-sref="votos"><span class="glyphicon glyphicon-asterisk"></span>
-                            &#xA0;<span>Consultar Votos</span>
+                            &#xA0;<span translate="menu.search-votos">Consultar Votos</span>
                             </a>
                         </li>                                         
                     </ul>
@@ -42,7 +42,7 @@
                 <li ng-class="{active: $state.includes('account')}" ng-switch-when="true" class="dropdown pointer">
                      <a ui-sref="about">                        
                         <span class=" glyphicon glyphicon-bookmark"></span>
-                        <span>About</span>
+                        <span translate="menu.about">About</span>
                     </a>                 
                 </li>                         
             </ul>
